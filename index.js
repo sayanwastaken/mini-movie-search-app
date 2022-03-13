@@ -2,7 +2,7 @@ let key = "adb42c1f";
 let getMovie = async () => {
   try{
   let query = document.querySelector("input").value;
-  let res = await fetch(`http://www.omdbapi.com/?t=${query}&apikey=${key}`);
+  let res = await fetch(`https://www.omdbapi.com/?t=${query}&apikey=${key}`);
   let data = await res.json();
   document.getElementById("results").style.display = "none";
   let name = data.Title;
@@ -55,7 +55,7 @@ async function searchMovie() {
   try {
     let query = document.querySelector("input").value;
 
-    let res = await fetch(`http://www.omdbapi.com/?s=${query}&apikey=${key}`);
+    let res = await fetch(`https://www.omdbapi.com/?s=${query}&apikey=${key}`);
 
     let data = await res.json();
     return data.Search;
