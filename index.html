@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Searcher</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>Search And Find Movie</h1>
+      </div>
+      <div class="search">
+        <input
+          type="search"
+          name=""
+          id="search"
+          placeholder="Search Your Movie"
+          oninput="debounce(someFn,2000)"
+        />
+        <button onclick="getMovie()">Search</button>
+      </div>
+      <div id="results">
+
+      </div>
+      <div id="showDiv">
+        <div id="imgDiv"></div>
+        <div id="detailDiv"></div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="./index.js"></script>
+
+<!-- http://www.omdbapi.com/?s=${query}&apikey=${key}` -->
+
+<!-- http://www.omdbapi.com/?s=spider&apikey=adb42c1f` -->
